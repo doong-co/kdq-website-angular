@@ -1,0 +1,116 @@
+$icon-font-path: "../fonts/"
+
+@import compass/css3/box-shadow
+
+@import custom/_variables.scss
+
+// bower:scss
+@import font-awesome/scss/font-awesome.scss
+@import bootstrap/scss/bootstrap.scss
+// endbower
+
+@import custom/_theme.sass
+
+$bg-masthead: #3d69e7
+$bg-default: #4862AE
+html, body
+  color: #121212
+  height: 100%
+  font-weight: 300
+
+.header-fixed
+  .kdq-masthead
+    padding-top: 6rem
+
+.kdq-header
+  font-weight: 100
+  .navbar
+    transition: all .5s .1s
+.nav-white
+  background-color: #fff
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  .navbar-brand,
+  .navbar-nav .nav-link
+    color: rgba(0, 0, 0, 0.8)
+    &:hover, &:focus
+      color: rgba(0, 0, 0, 0.8)
+
+
+.bg-overlay
+  background-color: rgba(89,89,89,.4)
+  position: absolute
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 0
+
+.kdq-masthead
+  position: relative
+  padding: 3rem .9375rem 2rem
+  text-align: center
+  min-height: 80%
+  background-color: $bg-masthead
+  color: #fff
+  .container-fluid, .container
+    z-index: 1
+    position: relative
+  h1
+    text-transform: uppercase
+  h1, h6
+    margin-bottom: 1.5rem
+  @include media-breakpoint-up(md)
+    h1
+      font-size: 4.5rem
+    h6
+      font-size: 1.5rem
+    h1, h6
+      margin-bottom: 2.5rem
+      line-height: 1.3
+
+.kdq-section
+  padding: 3rem .9375rem 2rem
+  position: relative
+  h2
+    text-align: center
+  img
+    margin: 0 auto
+    display: block
+    max-width: 12rem
+  .row + .row
+    margin-top: 1.5rem
+
+.kdq-footer
+  padding: 3rem .9375rem 2rem
+  background-color: $bg-default
+  color: #fff
+  position: relative
+  min-height: 160px
+  .copyright-footer
+    position: absolute
+    bottom: 0
+  a
+    color: #fff
+
+.kdq-business
+  background-color: $bg-default
+  text-align: center
+  color: #fff
+  .fa
+    font-size: 3rem
+    margin: 1.5rem 0
+
+.kdq-clients
+  .client-info
+    text-align: justify
+    text-align-last: left
+  img
+    margin-bottom: 3rem
+  @include media-breakpoint-up(md)
+    img
+      margin-bottom: 0
+.kdq-connect
+  background-color: #374b84
+  color: #fff
+  h2
+    text-align: left
