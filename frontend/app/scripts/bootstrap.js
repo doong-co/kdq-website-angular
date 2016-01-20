@@ -111,18 +111,19 @@
     },
     "retina_detect": true
   });
+
   var $mainHeader = $("#main-header");
   $(window).on("scroll", function() {
     if ($(this).scrollTop() > 100) {
       $mainHeader.addClass("nav-white");
-    }
-    else {
+    } else {
       $mainHeader.removeClass("nav-white");
     }
- });
+  });
 
   $(document).ready(function() {
     angular.bootstrap(document, ['kdq']);
+
   });
 
 })(window.jQuery, window.angular);

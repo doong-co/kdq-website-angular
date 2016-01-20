@@ -22,16 +22,18 @@
   <header class="kdq-header">
     <nav id="main-header" class="navbar navbar-fixed-top navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">KodeQ</a>
-        <button type="button" class="navbar-toggler hidden-sm-up pull-right" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
-          &#9776;
-        </button>
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="/"><img src="images/kodeq-logo.svg"></a>
+          <button type="button" class="navbar-toggler hidden-sm-up pull-right" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+            &#9776;
+          </button>
+        </div>
         <div class="collapse navbar-toggleable-xs" id="main-navbar">
-          <ul class="nav navbar-nav pull-sm-right">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Our services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-          </ul>
+          <nav class="nav navbar-nav pull-sm-right">
+            <a class="nav-item nav-link" href="#">Home</a>
+            <a class="nav-item nav-link" href="#">Our services</a>
+            <a class="nav-item nav-link" href="#">About us</a>
+          </nav>
         </div>
       </div>
     </nav>
@@ -95,7 +97,6 @@
   <section class="kdq-section">
     <div class="container">
       <h2 class="m-b-3">How we work</h2>
-      <canvas id="our-work" width="100%" height="350"></canvas>
     </div>
   </section>
   <!-- <section class="kdq-section kdq-connect">

@@ -24,16 +24,45 @@ html, body
 
 .kdq-header
   font-weight: 100
+  .logo
+    padding: 0
+    img
+      width: 48px
+      height: 48px
+  .navbar-toggler
+    font-size: 1.8rem
+  .navbar-nav .nav-link
+    padding-top: .7rem
+    padding-bottom: .7rem
+  .navbar-header
+    +clearfix()
+    float: none
   .navbar
     transition: all .5s .1s
+    padding: 0.5rem 1rem
+  +media-breakpoint-up(sm)
+    .navbar-header
+      float: left
+  +media-breakpoint-down(xs)
+    .navbar-nav
+      .nav-link
+        float: none
+      .nav-link + .nav-link
+        margin-left: 0
+
+.navbar-dark
+  .navbar-toggler
+    color: #fff
+
 .nav-white
   background-color: #fff
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+  border-bottom: 1px solid rgba(black, 0.1)
   .navbar-brand,
+  .navbar-toggler,
   .navbar-nav .nav-link
-    color: rgba(0, 0, 0, 0.8)
+    color: rgba(black, 0.6)
     &:hover, &:focus
-      color: rgba(0, 0, 0, 0.8)
+      color: black
 
 
 .bg-overlay
