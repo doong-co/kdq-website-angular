@@ -13,6 +13,7 @@ $icon-font-path: "../fonts/"
 
 $bg-masthead: #3d69e7
 $bg-default: #4862AE
+
 html, body
   color: #121212
   height: 100%
@@ -118,13 +119,18 @@ html, body
   color: #fff
   position: relative
   min-height: 160px
-  .copyright-footer
-    position: absolute
-    bottom: 0
+  .footer-copyright
+    text-align: right
+  +media-breakpoint-up(sm)
+    .footer-copyright
+      text-align: left
+    .footer-nav
+      float: right
   a
     color: #fff
 
 .kdq-business
+  padding-bottom: 4rem
   background-color: $bg-default
   text-align: center
   color: #fff
@@ -142,7 +148,34 @@ html, body
     img
       margin-bottom: 0
 .kdq-connect
-  background-color: #374b84
+  background-color: $bg-default
   color: #fff
-  h2
-    text-align: left
+  p
+    text-align: center
+  .container
+    max-width: 860px
+  .connect-form
+    background-color: #fff
+    padding: 3rem 2rem
+    border: 1px solid #ccc
+    border-radius: 0.3rem
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)
+    margin-bottom: -160px
+    position: relative
+    z-index: 1
+.kdq-locations
+  background-color: #e7e7e7
+  .map
+    height: 460px
+  .map + .map
+    border-top: 8px solid $bg-default
+  +media-breakpoint-up(sm)
+    .map
+      width: 50%
+      float: left
+      border-right: 4px solid $bg-default
+      border-top: none
+    .map + .map
+      border-left: 4px solid $bg-default
+      border-right: none
+

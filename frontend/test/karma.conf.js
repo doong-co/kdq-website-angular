@@ -36,7 +36,7 @@ module.exports = function(config) {
       'bower_components/tether/dist/js/tether.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/particles.js/particles.js',
-      'bower_components/d3/d3.js',
+      'bower_components/gmaps/gmaps.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
