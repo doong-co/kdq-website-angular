@@ -139,14 +139,23 @@ html, body
     margin: 1.5rem 0
 
 .kdq-clients
+  padding-bottom: 4rem
+  .client
+    padding: 1rem
+    border-radius: 0.3rem
+    text-align: center
   .client-info
-    text-align: justify
-    text-align-last: left
-  img
-    margin-bottom: 3rem
-  @include media-breakpoint-up(md)
     img
-      margin-bottom: 0
+      height: 120px
+      width: auto
+  .client-technology
+    font-size: 3rem
+    color: $bg-default
+    text-shadow: 1px 1px rgba(0,0,0,.16)
+    img
+      width: auto
+      height: 48px
+
 .kdq-connect
   background-color: $bg-default
   color: #fff

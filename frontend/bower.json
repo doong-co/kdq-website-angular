@@ -16,7 +16,8 @@
     "tether": "~1.1.1",
     "bootstrap": "v4.0.0-alpha.2",
     "particles.js": "~2.0.0",
-    "gmaps": "~0.4.22"
+    "gmaps": "~0.4.22",
+    "devicon": "*"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
