@@ -9,3 +9,9 @@ sudo npm install -g grunt-cli
 sudo npm install -g bower
 sudo npm install -g live-server
 sudo npm install -g sails
+sudo npm install -g pm2
+
+export NODE_PATH=/usr/lib/node_modules
+
+(cd ./frontend && npm install)
+(cd ./frontend && bower install)
