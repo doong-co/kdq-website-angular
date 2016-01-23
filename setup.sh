@@ -18,6 +18,10 @@ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-d
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
 curl -L https://get.rvm.io | bash -s stable
+
+# In case rvm not found
+(cd ~/.rvm/archives && tar xvzf rvm-1.26.0.tgz && cd mpapis-rvm-xxxxxxx && ./install && cd .. && rm -Rf mpapis-rvm-xxxxxxxx)
+
 source ~/.rvm/scripts/rvm
 echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
 rvm install 2.1.2
