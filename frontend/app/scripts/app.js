@@ -9,5 +9,12 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'kdq.services',
+    'kdq.widgets',
+    'kdq.layout',
+    'kdq.home',
+    'kdq.our_services',
+    'kdq.about_us',
   ]);
+  

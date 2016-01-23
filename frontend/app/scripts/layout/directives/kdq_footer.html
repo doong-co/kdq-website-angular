@@ -1,0 +1,23 @@
+<footer class="kdq-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 m-b-1 footer-nav">
+        <div class="m-b-1 clearfix">
+          <nav class="nav nav-inline pull-right">
+            <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+          </nav>
+        </div>
+        <div class="clearfix">
+          <nav class="nav nav-inline pull-right">
+            <a class="nav-link" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+            <a class="nav-link" href="#"><i class="fa fa-twitter fa-lg"></i></a>
+            <a class="nav-link" href="#"><i class="fa fa-github fa-lg"></i></a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-5 footer-copyright">
+        <p>© 2016 KodeQ LLC</p>
+      </div>
+    </div>
+  </div>
+</footer>

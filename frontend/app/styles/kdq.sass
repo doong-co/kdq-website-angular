@@ -69,7 +69,8 @@ html, body
       color: black
 
 
-.bg-overlay
+.bg-overlay,
+.bg-particles
   background-color: rgba(89,89,89,.4)
   position: absolute
   height: 100%
@@ -109,7 +110,6 @@ html, body
   img
     margin: 0 auto
     display: block
-    max-width: 12rem
   .row + .row
     margin-top: 1.5rem
 
@@ -139,7 +139,6 @@ html, body
     margin: 1.5rem 0
 
 .kdq-clients
-  padding-bottom: 4rem
   .client
     padding: 1rem
     border-radius: 0.3rem
@@ -152,10 +151,15 @@ html, body
     font-size: 3rem
     color: $bg-default
     text-shadow: 1px 1px rgba(0,0,0,.16)
+    max-width: 25rem
+    margin: 0 auto
     img
       width: auto
       height: 48px
 
+.kdq-work
+  img
+    width: 100%
 .kdq-connect
   background-color: $bg-default
   color: #fff
@@ -187,4 +191,5 @@ html, body
     .map + .map
       border-left: 4px solid $bg-default
       border-right: none
+      border-top: none
 

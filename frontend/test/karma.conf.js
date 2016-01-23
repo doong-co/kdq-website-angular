@@ -37,6 +37,8 @@ module.exports = function(config) {
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/particles.js/particles.js',
       'bower_components/gmaps/gmaps.js',
+      'bower_components/trianglify/dist/trianglify.min.js',
+      'bower_components/lodash/lodash.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

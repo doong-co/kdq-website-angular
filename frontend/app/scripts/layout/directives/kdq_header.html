@@ -1,0 +1,17 @@
+<header class="kdq-header">
+  <nav id="main-header" class="navbar navbar-fixed-top navbar-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand logo" href="/"><img src="images/kodeq-logo-simple.svg"></a>
+        <button type="button" class="navbar-toggler hidden-sm-up pull-right" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+      <div class="collapse navbar-toggleable-xs" id="main-navbar">
+        <nav class="nav navbar-nav pull-sm-right">
+          <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+        </nav>
+      </div>
+    </div>
+  </nav>
+</header>
