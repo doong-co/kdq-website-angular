@@ -115,11 +115,17 @@
           "retina_detect": true
         };
         $element.attr('id', 'particle' + Date.now());
+        var pjs = undefined;
         if (!_.isFunction($window.particlesJS)) {
           $log.error('particlesJS is not function');
         } else {
-          $window.particlesJS($element.attr('id'), optionDefault);
+          pjs = $window.particlesJS($element.attr('id'), optionDefault);
         }
+
+        $scope.$on('$destroy', function() {
+          pjs.fn.vendors.destroypJS();
+          window.pJSDom = [];
+        });
       }
     };
   }
