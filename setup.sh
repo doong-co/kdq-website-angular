@@ -29,8 +29,3 @@ ruby -v
 
 # Install Compass
 gem install compass
-
-export NODE_PATH=/usr/lib/node_modules
-
-(cd ./frontend && sudo npm install)
-(cd ./frontend && sudo bower install --allow-root)
