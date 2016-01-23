@@ -1,0 +1,22 @@
+{
+  "name": "kdq",
+  "version": "1.0.0",
+  "description": "kdq website angular",
+  "main": "run_frontend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodeq-dev/kdq-website-angular.git"
+  },
+  "author": "KodeQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kodeq-dev/kdq-website-angular/issues"
+  },
+  "homepage": "https://github.com/kodeq-dev/kdq-website-angular#readme",
+  "dependencies": {
+    "live-server": "^0.9.1"
+  }
+}
