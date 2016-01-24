@@ -142,12 +142,14 @@
         var particleIndex = _.findIndex($window.pJSDom, function(p) {
           return p.pJS.canvas.el.parentElement.id === particleId;
         });
+        
+        if(particleIndex !== -1) {
+          var particle = $window.pJSDom[particleIndex].pJS;
+          $window.pJSDom.splice(particleIndex, 1);
 
-        var particle = $window.pJSDom[particleIndex].pJS;
-        $window.pJSDom.splice(particleIndex, 1);
-
-        $window.cancelAnimationFrame(particle.fn.drawAnimFrame);
-        particle.canvas.el.remove();
+          $window.cancelAnimationFrame(particle.fn.drawAnimFrame);
+          particle.canvas.el.remove();
+        }
       }
     });
   }

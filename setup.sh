@@ -7,7 +7,6 @@ sudo apt-get install -y nodejs
 
 sudo npm install -g grunt-cli
 sudo npm install -g bower
-sudo npm install -g live-server
 sudo npm install -g sails
 sudo npm install -g pm2
 

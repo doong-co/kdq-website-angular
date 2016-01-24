@@ -1,11 +1,18 @@
-var liveServer = require("live-server");
+var static = require('node-static');
 
-var params = {
-    port: 9000, // Set the server port. Defaults to 8080.
-    root: "frontend/dist", // Set root directory that's being server. Defaults to cwd.
-    open: false, // When false, it won't load your browser by default.
-    file: "index.html", // When set, serve this file for every 404 (useful for single-page applications)
-    wait: 1000 // Waits for all changes, before reloading. Defaults to 0 sec.
-};
+var fileServer = new static.Server('frontend/dist');
 
-liveServer.start(params);
+require('http').createServer(function (request, response) {
+    request.addListener('end', function () {
+        fileServer.serve(request, response, function (err, result) {
+            if (err && (err.status === 404)) {
+              fileServer.serveFile('/404.html', 404, {}, request, response);
+            } else if (err) { // There was an error serving the file
+                console.error("Error serving " + request.url + " - " + err.message);
+
+                response.writeHead(err.status, err.headers);
+                response.end();
+            }
+        });
+    }).resume();
+}).listen(9000);

@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/kodeq-dev/kdq-website-angular#readme",
   "dependencies": {
-    "live-server": "^0.9.1"
+    "node-static": "^0.7.7"
   }
 }
