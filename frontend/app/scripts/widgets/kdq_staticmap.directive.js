@@ -24,8 +24,7 @@
           styles: $scope.styles || getStylesGoldBlue(),
           markers: $scope.markers || [{
             lat: $attr.lat,
-            lng: $attr.lng,
-            icon: "http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/map-marker-icon.png"
+            lng: $attr.lng
           }]
         }
 
