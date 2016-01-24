@@ -11,7 +11,7 @@
       scope: true,
       templateUrl: 'scripts/layout/directives/kdq_header.html',
       link: function($scope, $element) {
-        var $nav = $($element.find('.navbar')[0]);
+        var $nav = $element;
         $(window).on("scroll", function() {
           if ($(this).scrollTop() > 100) {
             $nav.addClass("nav-white");

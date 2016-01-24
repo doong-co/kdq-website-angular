@@ -32,10 +32,33 @@ html, body
       height: 48px
   .navbar
     border-bottom: 1px solid transparent
-  .nav-white
-    border-bottom-color: rgba(black, 0.1)
+  
   .navbar-toggler
     font-size: 1.8rem
+    position: fixed
+    z-index: 1031
+    top: 0.5rem
+    right: 1rem
+    color: rgba(black, 0.6)
+    &:hover, &:focus
+      color: black
+    &.collapsed
+      color: white
+      
+  &.nav-white
+    .navbar-toggler
+      color: rgba(black, 0.6)
+      &:hover, &:focus
+        color: black
+    .navbar
+      background-color: #fff
+      border-bottom-color: rgba(black, 0.1)
+      .navbar-brand,
+      .navbar-nav .nav-link
+        color: rgba(black, 0.6)
+        &:hover, &:focus
+          color: black
+
   .navbar-nav .nav-link
     padding-top: .7rem
     padding-bottom: .7rem
@@ -54,20 +77,17 @@ html, body
         float: none
       .nav-link + .nav-link
         margin-left: 0
+  .navbar-toggler:not(.collapsed) + .navbar
+    background-color: #fff
+    .navbar-brand,
+    .navbar-nav .nav-link
+      color: rgba(black, 0.6)
+      &:hover, &:focus
+        color: black
 
 .navbar-dark
   .navbar-toggler
     color: #fff
-
-.nav-white
-  background-color: #fff
-  .navbar-brand,
-  .navbar-toggler,
-  .navbar-nav .nav-link
-    color: rgba(black, 0.6)
-    &:hover, &:focus
-      color: black
-
 
 .bg-overlay,
 .bg-particles
@@ -143,8 +163,8 @@ html, body
   color: #fff
   .fa
     font-size: 3rem
-    margin-top: 1rem
-    margin-bottom: 1.5rem
+    margin-top: 2rem
+    margin-bottom: 2.5rem
 
 .kdq-clients
   .client
