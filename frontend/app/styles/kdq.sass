@@ -142,9 +142,12 @@ html, body
 
 .kdq-clients
   .client
-    margin-bottom: 1rem
+    margin-bottom: 3rem
     border-radius: 0.3rem
     text-align: center
+  +media-breakpoint-up(sm)
+    .client
+      margin-bottom: 0
   .client-info
     img
       height: 120px
@@ -157,7 +160,7 @@ html, body
     margin: 0 auto
     img
       width: auto
-      height: 48px
+      height: 2.5rem
 
 .kdq-work
   img

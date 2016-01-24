@@ -19,11 +19,13 @@
           lat: $attr.lat,
           lng: $attr.lng,
           zoom: 14,
+          scale: 2,
           address: $attr.address,
           styles: $scope.styles || getStylesGoldBlue(),
           markers: $scope.markers || [{
             lat: $attr.lat,
-            lng: $attr.lng
+            lng: $attr.lng,
+            icon: "http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/map-marker-icon.png"
           }]
         }
 
