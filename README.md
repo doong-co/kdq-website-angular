@@ -1,6 +1,6 @@
 # KodeQ.com
 As Wordpress became too clunky and difficult to manage, 
-we decided to re-build it from scratch and strip all the unnecessary overhead.
+we decided to re-build our website from scratch and strip all the unnecessary overhead.
 
 What we ended up with was a mobile-first responsive AngularJS single-page website with superfast load time. 
 The website was deployed on a linode server that has the lowest configuration and still load very quickly.
