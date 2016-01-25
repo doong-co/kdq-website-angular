@@ -6,8 +6,7 @@ What we ended up with was a mobile-first responsive AngularJS single-page websit
 The website was deployed on a linode server that has the lowest configuration and still load very quickly.
 
 Note that as we're not handling heavy traffic or large amount of data, this is meant to be an experiment to benchmark 
-how fast a website can load with more content and interaction. As of now we're not at the peak of load speed right now, we will continue to experiment
-and push it to the limits.
+how fast a website can load with more content and interaction. As of now we're not at the peak of the possible load speed, but we will continue to experiment and push it to the limits.
 
 
 Our next goals to enhance this website:
