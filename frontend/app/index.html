@@ -67,7 +67,9 @@
   <!-- endbuild -->
   <script>
     (function($, angular) {
-        // angular.bootst rap(document, ['kdq']);
+      document.addEventListener("DOMContentLoaded", function(event) {
+        angular.bootstrap(document, ['kdq']);
+      });
     })(window.jQuery, window.angular);
   </script>
 </body>
