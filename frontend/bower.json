@@ -12,7 +12,9 @@
     "bootstrap": "v4.0.0-alpha.2",
     "particles.js": "~2.0.0",
     "trianglify": "~0.4.0",
-    "lodash": "~4.0.0"
+    "lodash": "~4.0.0",
+    "angulartics": "^1.0.3",
+    "angulartics-google-analytics": "^0.1.4"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
@@ -24,6 +26,12 @@
       "main": [
         "scss/bootstrap.scss",
         "dist/js/bootstrap.js"
+      ]
+    },
+    "angulartics": {
+      "main": [
+        "src/angulartics.js",
+        "src/angulartics-inspectlet.js"
       ]
     }
   }

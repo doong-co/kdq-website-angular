@@ -4,6 +4,9 @@ angular
   .module('kdq', [
     'ngSanitize',
     'ngTouch',
+    'angulartics', 
+    'angulartics.google.analytics',
+    'angulartics.inspectlet',
     'ui.router',
     'kdq.services',
     'kdq.widgets',
