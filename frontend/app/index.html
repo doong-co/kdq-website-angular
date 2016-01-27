@@ -53,7 +53,6 @@
   <script src="scripts/home/home.config.js"></script>
   <script src="scripts/our_services/our_services.config.js"></script>
   <script src="scripts/about_us/about_us.config.js"></script>
-  <script src="scripts/bootstrap.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/services/navigation.service.js"></script>
   <script src="scripts/layout/directives/kdq_layout.directive.js"></script>
@@ -62,8 +61,12 @@
   <script src="scripts/widgets/kdq_particles.directive.js"></script>
   <script src="scripts/widgets/kdq_trianglify.directive.js"></script>
   <script src="scripts/widgets/kdq_staticmap.directive.js"></script>
-
   <!-- endbuild -->
+  <script>
+    (function($, angular) {
+        angular.bootstrap(document, ['kdq']);
+    })(window.jQuery, window.angular);
+  </script>
 </body>
 
 </html>
