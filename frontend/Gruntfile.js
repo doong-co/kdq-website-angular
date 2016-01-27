@@ -19,16 +19,15 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
-  var _ = require('lodash');
-  var cdnService = _.extend(require('google-cdn-data'), {
+  var cdnService = {
     jquery: {
-      versions: ['2.2.0', '2.1.4', '2.1.3', '2.1.2', '2.1.1', '2.1.0', '2.0.3', '2.0.2'],
+      versions: ['2.2.0', '2.1.4'],
       url: function (version) {
-        return '//ajax.googleapis.com/ajax/libs/jquery/' + version + '/jquery.min.js';
+        return '//cdnjs.cloudflare.com/ajax/libs/jquery/' + version + '/jquery.min.js';
       }
     },
     lodash: {
-      versions: ['4.0.1', '3.10.1', '3.10.1', '3.9.3', '3.8.0'],
+      versions: ['4.0.1', '3.10.1'],
       url: function (version) {
         return '//cdn.jsdelivr.net/lodash/' + version + '/lodash.min.js';
       }
@@ -44,7 +43,31 @@ module.exports = function (grunt) {
       url: function (version) {
         return '//cdnjs.cloudflare.com/ajax/libs/tether/' + version + '/js/tether.min.js';
       }
-    }
+    },
+  };
+
+  var angularFiles = [
+    'angular',
+    'angular-animate',
+    'angular-aria',
+    'angular-cookies',
+    'angular-loader',
+    'angular-messages',
+    'angular-resource',
+    'angular-route',
+    'angular-sanitize',
+    'angular-touch'
+  ];
+
+  angularFiles.forEach(function (item) {
+    var stableVersions = ['1.4.9', '1.4.8'];
+
+    cdnService[item] = {
+      versions: stableVersions,
+      url: function (version) {
+        return '//cdnjs.cloudflare.com/ajax/libs/angular.js/' + version + '/' + item + '.min.js';
+      }
+    };
   });
 
   // Configurable paths for the application
