@@ -37,21 +37,21 @@
           <div class="card">
             <i class="fa fa-users"></i>
             <h3 class="m-b-2">Selective recruiting</h3>
-            <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+            <p>We handpick the most competitive front-end developers in the field based on their industry expertise, innovative mindset, and, most importantly, ambition for perfection.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
             <i class="fa fa-connectdevelop"></i>
             <h3 class="m-b-2">Transparency</h3>
-            <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+            <p>We have our professionals communicate directly to our clients during the project and beyond.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
             <i class="fa fa-line-chart"></i>
             <h3 class="m-b-2">Commitment</h3>
-            <p>Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+            <p>We go extra miles to innovate based on our clients' objectives and goals with full dedication.</p>
           </div>
         </div>
       </div>
@@ -109,17 +109,17 @@
       <h2 class="m-b-3">Get in touch</h2>
       <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
       <div class="connect-form">
-        <form>
+        <form ng-submit="submitConnect()">
           <div class="row">
             <div class="form-group col-md-6">
-              <input type="text" class="form-control form-control-lg" placeholder="Full name">
+              <input type="text" class="form-control form-control-lg" ng-model="connect.fullname" placeholder="Full name">
             </div>
             <div class="form-group col-md-6">
-              <input type="email" class="form-control form-control-lg" placeholder="Email address">
+              <input type="email" class="form-control form-control-lg" ng-model="connect.email" placeholder="Email address">
             </div>
           </div>
           <div class="form-group">
-            <textarea type="text" class="form-control form-control-lg" placeholder="Message"></textarea>
+            <textarea type="text" class="form-control form-control-lg" ng-model="connect.message" placeholder="Message"></textarea>
           </div>
           <button type="submit" class="btn btn-primary-outline btn-lg btn-block">Submit</button>
         </form>

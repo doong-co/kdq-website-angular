@@ -11,7 +11,8 @@
           templateUrl: 'scripts/home/home.html',
           nav: {
             title: 'Home'
-          }
+          },
+          controller: 'HomeController'
         });
     });
 

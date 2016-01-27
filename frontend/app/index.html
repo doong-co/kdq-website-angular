@@ -7,7 +7,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <!-- endbower -->
@@ -16,11 +15,184 @@
   <link rel="stylesheet" href="styles/kdq.css">
   <!-- endbuild -->
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,300italic' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body class="header-fixed">
-  <kdq-layout>
+  <header class="kdq-header">
+    <button type="button" class="navbar-toggler hidden-sm-up pull-right collapsed" data-toggle="collapse" data-target="#main-navbar">
+      &#9776;
+    </button>
+    <nav id="main-header" class="navbar navbar-fixed-top navbar-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="/"><img src="images/kodeq-logo-simple.svg"></a>
+        </div>
+        <div class="collapse navbar-toggleable-xs" id="main-navbar">
+          <nav class="nav navbar-nav pull-sm-right">
+            <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="kdq-home">
+    <section class="kdq-masthead">
+      <canvas kdq-trianglify class="bg-overlay"></canvas>
+      <div kdq-particles class="bg-particles"></div>
+      <div class="container">
+        <h1>SOLID offshore front-end development</h1>
+        <h6>Our model heavily leverages long-term partnerships. You can count on us for on-time, on-budget delivery, and awesome products.</h6>
+        <a ui-sref="our_services" type="button" class="btn btn-white-outline btn-lg">Learn more</a>
+      </div>
+    </section>
+    <section class="kdq-section kdq-intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 pull-md-right">
+            <img class="intro-img m-b-3" src="images/intro.png" alt="Offshore development team, onshore quality">
+          </div>
+          <div class="col-md-7 pull-md-left">
+            <h2 class="m-b-3">Offshore development team, onshore quality</h2>
+            <p>Our no-surprises approach transforms bold ideas into softwares that allow businesses to meet the growing demand for fast, secure and interactive products:</p>
+            <ul>
+              <li>
+                <p>We deliver working custom software on-time and on-budget.</p>
+              </li>
+              <li>
+                <p>We write lean, stable codes with a huge emphasis on scalability and quality so that your software is less costly to maintain and much more responsive to market changes.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="kdq-section kdq-business">
+      <div class="container">
+        <h2 class="m-b-3">Business model</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <i class="fa fa-users"></i>
+              <h3 class="m-b-2">Selective recruiting</h3>
+              <p>We handpick the most competitive front-end developers in the field based on their industry expertise, innovative mindset, and, most importantly, ambition for perfection.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <i class="fa fa-connectdevelop"></i>
+              <h3 class="m-b-2">Transparency</h3>
+              <p>We have our professionals communicate directly to our clients during the project and beyond.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <i class="fa fa-line-chart"></i>
+              <h3 class="m-b-2">Commitment</h3>
+              <p>We go extra miles to innovate based on our clients' objectives and goals with full dedication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="kdq-section kdq-clients">
+      <div class="container">
+        <h2 class="m-b-3">Some of our clients</h2>
+        <div class="row">
+          <div class="col-md-6 client">
+            <div class="client-info m-b-3">
+              <h3 class="m-b-2">The weather channel</h3>
+              <div class="client-logo">
+                <img src="images/twc.png" alt="The weather channel" class="img-rounded">
+              </div>
+            </div>
+            <div class="client-technology">
+              <ul class="nav nav-inline">
+                <li class="nav-item" title="angularjs"><img src="http://svgporn.com/logos/angular-icon.svg" alt=""></li>
+                <li class="nav-item" title="gulp"><img src="http://svgporn.com/logos/gulp.svg" alt=""></li>
+                <li class="nav-item" title="sass"><img src="http://svgporn.com/logos/sass.svg" alt=""></li>
+                <li class="nav-item" title="karma"><img src="http://svgporn.com/logos/karma.svg" alt=""></li>
+                <li class="nav-item" title="jasmine"><img src="http://svgporn.com/logos/jasmine.svg" alt=""></li>
+                <li class="nav-item" title="bootstrap"><img src="http://svgporn.com/logos/bootstrap.svg" alt=""></li>
+                <li class="nav-item" title="jira"><img src="http://svgporn.com/logos/jira.svg" alt=""></li>
+                <li class="nav-item" title="github"><img src="http://svgporn.com/logos/github-icon.svg" alt=""></li>
+                <li class="nav-item" title="slack"><img src="http://svgporn.com/logos/slack.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 client">
+            <div class="client-info m-b-3">
+              <h3 class="m-b-2">Wingstats</h3>
+              <div class="client-logo">
+                <img src="images/wingstats.png" alt="Wingstats" class="img-rounded">
+              </div>
+            </div>
+            <div class="client-technology">
+              <ul class="nav nav-inline">
+                <li class="nav-item" title="angularjs"><img src="http://svgporn.com/logos/angular-icon.svg" alt=""></li>
+                <li class="nav-item" title="grunt"><img src="http://svgporn.com/logos/grunt.svg" alt=""></li>
+                <li class="nav-item" title="yii"><img src="http://svgporn.com/logos/yii.svg" alt=""></li>
+                <li class="nav-item" title="bootstrap"><img src="http://svgporn.com/logos/bootstrap.svg" alt=""></li>
+                <li class="nav-item" title="requirejs"><img src="http://svgporn.com/logos/require.svg" alt=""></li>
+                <li class="nav-item" title="github"><img src="http://svgporn.com/logos/github-icon.svg" alt=""></li>
+                <li class="nav-item" title="slack"><img src="http://svgporn.com/logos/slack.svg" alt=""></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="kdq-section kdq-connect">
+      <div class="container">
+        <h2 class="m-b-3">Get in touch</h2>
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+        <div class="connect-form">
+          <form ng-submit="submitConnect()">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control form-control-lg" ng-model="connect.fullname" placeholder="Full name">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control form-control-lg" ng-model="connect.email" placeholder="Email address">
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea type="text" class="form-control form-control-lg" ng-model="connect.message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary-outline btn-lg btn-block">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="kdq-locations clearfix">
+      <div kdq-static-map address="3237 Telford Terrace SW, Atlanta, GA 30331, USA" lat="33.6651392" lng="-84.5173652" class="map">
+      </div>
+      <div kdq-static-map address="25 Nguyễn Hữu Thọ, Tân Hưng, Ho Chi Minh City, Ho Chi Minh, Vietnam" lat="10.7409917" lng="106.698449" class="map"></div>
+    </section>
+  </div>
+  <footer class="kdq-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 m-b-1 footer-nav">
+          <div class="m-b-1 clearfix">
+            <nav class="nav nav-inline pull-right">
+              <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+            </nav>
+          </div>
+          <div class="clearfix">
+            <nav class="nav nav-inline pull-right">
+              <a class="nav-link" href="#"><i class="fa fa-facebook fa-lg"></i></a>
+              <a class="nav-link" href="#"><i class="fa fa-twitter fa-lg"></i></a>
+              <a class="nav-link" href="#"><i class="fa fa-github fa-lg"></i></a>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-5 footer-copyright">
+          <p>© 2016 KodeQ LLC</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <kdq-layout>
     <header class="kdq-header">
       <nav class="navbar navbar-fixed-top navbar-dark wireframe-loading">
         <div class="flagwave"></div>
@@ -29,17 +201,14 @@
     <section class="kdq-masthead wireframe-loading">
       <div class="flagwave"></div>
     </section>
-  </kdq-layout>
-  
+  </kdq-layout> -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/tether/dist/js/tether.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
-
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -51,7 +220,6 @@
   <script src="bower_components/angulartics-google-analytics/lib/angulartics-google-analytics.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
-
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/services/services.config.js"></script>
   <script src="scripts/widgets/widgets.config.js"></script>
@@ -60,6 +228,7 @@
   <script src="scripts/our_services/our_services.config.js"></script>
   <script src="scripts/about_us/about_us.config.js"></script>
   <script src="scripts/app.js"></script>
+  <script src="scripts/home/home.controller.js"></script>
   <script src="scripts/services/navigation.service.js"></script>
   <script src="scripts/layout/directives/kdq_layout.directive.js"></script>
   <script src="scripts/layout/directives/kdq_header.directive.js"></script>
@@ -69,24 +238,44 @@
   <script src="scripts/widgets/kdq_staticmap.directive.js"></script>
   <!-- endbuild -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-72656791-2', { 'cookieDomain': 'none' });
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-72656791-2', {
+    'cookieDomain': 'none'
+  });
   </script>
   <script type="text/javascript" id="inspectletjs">
-    window.__insp = window.__insp || [];
-    __insp.push(['wid', 923773264]);
-    (function() {
-    function ldinsp(){if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-    setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
-    })();
+  window.__insp = window.__insp || [];
+  __insp.push(['wid', 923773264]);
+  (function() {
+    function ldinsp() {
+      if (typeof window.__inspld != "undefined") return;
+      window.__inspld = 1;
+      var insp = document.createElement('script');
+      insp.type = 'text/javascript';
+      insp.async = true;
+      insp.id = "inspsync";
+      insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(insp, x);
+    };
+    setTimeout(ldinsp, 500);
+    document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+  })();
   </script>
   <script>
-    (function($, angular) {
-      angular.bootstrap(document, ['kdq']);
-    })(window.jQuery, window.angular);
+  (function($, angular) {
+    angular.bootstrap(document, ['kdq']);
+  })(window.jQuery, window.angular);
   </script>
 </body>
 
