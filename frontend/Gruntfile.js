@@ -350,6 +350,11 @@ module.exports = function (grunt) {
         ],
         patterns: {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
+        },
+        blockReplacements: {
+          js: function (block){
+            return '<script async src="' + block.dest + '"><\/script>';
+          }
         }
       }
     },
@@ -423,8 +428,8 @@ module.exports = function (grunt) {
       dist: {
         options: {
           module: 'kdq',
-          htmlmin: '<%= htmlmin.dist.options %>',
-          usemin: 'scripts/scripts.js'
+          htmlmin: '<%= htmlmin.dist.options %>'
+          // usemin: 'scripts/vendor.js'
         },
         cwd: '<%= yeoman.app %>',
         src: 'scripts/**/*.html',
@@ -548,7 +553,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
     'filerev',

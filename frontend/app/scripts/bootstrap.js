@@ -2,8 +2,8 @@
 
 (function($, angular) {
 
-  $(document).ready(function() {
+  // $(document).ready(function() {
     angular.bootstrap(document, ['kdq']);
-  });
+  // });
 
 })(window.jQuery, window.angular);
