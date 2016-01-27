@@ -175,8 +175,7 @@ html, body
     margin-bottom: 3rem
     border-radius: 0.3rem
     text-align: center
-  +media-breakpoint-up(sm)
-    .client
+    &:last-child
       margin-bottom: 0
   .client-info
     img
@@ -188,7 +187,7 @@ html, body
     text-shadow: 1px 1px rgba(0,0,0,.16)
     max-width: 25rem
     margin: 0 auto
-    .nav .nav-inline
+    .nav-inline > .nav-item
       margin-left: .5rem
       margin-right: .5rem
     img
