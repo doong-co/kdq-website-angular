@@ -6,7 +6,7 @@
 
   function kdqLayoutDirective() {
     return {
-      restrict: 'E',
+      restrict: 'EA',
       replace: true,
       templateUrl: 'scripts/layout/directives/kdq_layout.html'
     };
