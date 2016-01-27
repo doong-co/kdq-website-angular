@@ -16,7 +16,6 @@
     "tether": "~1.1.1",
     "bootstrap": "v4.0.0-alpha.2",
     "particles.js": "~2.0.0",
-    "devicon": "*",
     "trianglify": "~0.4.0",
     "lodash": "~4.0.0"
   },
