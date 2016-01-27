@@ -18,6 +18,16 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn'
   });
+  
+  var _ = require('lodash');
+  var cdnService = _.extend(require('google-cdn-data'), {
+    jquery: {
+      versions: ['2.2.0', '2.1.4', '2.1.3', '2.1.2', '2.1.1', '2.1.0', '2.0.3', '2.0.2'],
+      url: function (version) {
+        return '//ajax.googleapis.com/ajax/libs/jquery/' + version + '/jquery.min.js';
+      }
+    }
+  });
 
   // Configurable paths for the application
   var appConfig = {
@@ -396,6 +406,9 @@ module.exports = function (grunt) {
 
     // Replace Google CDN references
     cdnify: {
+      options: {
+        cdn: cdnService
+      },
       dist: {
         html: ['<%= yeoman.dist %>/*.html']
       }
