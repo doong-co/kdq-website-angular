@@ -28,7 +28,6 @@
     "bootstrap": {
       "main": [
         "scss/bootstrap.scss",
-        "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
     }
