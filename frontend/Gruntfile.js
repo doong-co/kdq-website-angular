@@ -18,13 +18,31 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn'
   });
-  
+
   var _ = require('lodash');
   var cdnService = _.extend(require('google-cdn-data'), {
     jquery: {
       versions: ['2.2.0', '2.1.4', '2.1.3', '2.1.2', '2.1.1', '2.1.0', '2.0.3', '2.0.2'],
       url: function (version) {
         return '//ajax.googleapis.com/ajax/libs/jquery/' + version + '/jquery.min.js';
+      }
+    },
+    lodash: {
+      versions: ['4.0.1', '3.10.1', '3.10.1', '3.9.3', '3.8.0'],
+      url: function (version) {
+        return '//cdn.jsdelivr.net/lodash/' + version + '/lodash.min.js';
+      }
+    },
+    bootstrap: {
+      versions: ['4.0.0-alpha.2', '3.3.6'],
+      url: function (version) {
+        return '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/' + version + '/js/bootstrap.min.js';
+      }
+    },
+    tether: {
+      versions: ['1.1.1', '1.1.0'],
+      url: function (version) {
+        return '//cdnjs.cloudflare.com/ajax/libs/tether/' + version + '/js/tether.min.js';
       }
     }
   });
