@@ -1,6 +1,5 @@
 <!doctype html>
-<html>
-
+<html manifest="kdq.appcache">
 <head>
   <meta charset="utf-8">
   <title>KodeQ</title>
@@ -57,11 +56,19 @@
   <div kdq-layout>
     <header class="kdq-header">
       <nav class="navbar navbar-fixed-top navbar-dark wireframe-loading">
-        <div class="flagwave"></div>
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand logo" href="/"><img src="images/kodeq-logo-simple.svg"></a>
+          </div>
+        </div>
       </nav>
     </header>
     <section class="kdq-masthead wireframe-loading">
-      <div class="flagwave"></div>
+      <div class="container">
+        <h1>SOLID offshore front-end development</h1>
+        <h6>Our model heavily leverages long-term partnerships. You can count on us for on-time, on-budget delivery, and awesome products.</h6>
+        <a ui-sref="our_services" type="button" class="btn btn-white-outline btn-lg">Learn more</a>
+      </div>
     </section>
   </div>
   <script src="bower_components/jquery/dist/jquery.js"></script>
