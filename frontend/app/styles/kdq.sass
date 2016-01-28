@@ -13,7 +13,7 @@ $icon-font-path: "../fonts/"
 
 $bg-masthead: #3d69e7
 $bg-default: #4862AE
-$wireframe: rgba(black, .2)
+$wireframe: rgba($bg-default, .8)
 
 html, body
   color: #121212
@@ -24,7 +24,7 @@ div[kdq-layout]
   height: 100%
 
 .wireframe-loading
-  background-color: rgba(black, .3) !important
+  background-color: $wireframe !important
   min-height: 4rem
 
 .header-fixed
