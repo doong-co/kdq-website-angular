@@ -46,6 +46,7 @@ module.exports = function(grunt) {
     },
   };
   var cdnUrls = [
+    '//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic',
     '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js',
     '//cdn.jsdelivr.net/lodash/4.0.1/lodash.min.js',
