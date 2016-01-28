@@ -45,6 +45,15 @@ module.exports = function(grunt) {
       }
     },
   };
+  var cdnUrls = [
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js',
+    '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js',
+    '//cdn.jsdelivr.net/lodash/4.0.1/lodash.min.js',
+    '//cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js',
+    '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js',
+    '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-sanitize.min.js',
+    '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-touch.min.js'
+  ];
 
   var angularFiles = [
     'angular',
@@ -499,7 +508,8 @@ module.exports = function(grunt) {
           headcomment: ' <%= yeoman.appName %>',
           verbose: false,
           timestamp: true,
-          hash: true
+          hash: true,
+          cache: cdnUrls
         },
         src: ['**/**.*'],
         dest: '<%= yeoman.dist %>/<%= yeoman.appName %>.appcache'
