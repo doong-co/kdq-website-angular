@@ -1,4 +1,7 @@
 # KodeQ.com
+
+## Introduction
+
 As Wordpress became too clunky and difficult to manage, 
 we decided to re-build our website from scratch and strip all the unnecessary overhead.
 
@@ -18,6 +21,8 @@ Our next goals to enhance this website:
 - Lazy load heavy components
 - Automated testing
 
+## License
+Copyright by KodeQ ©2010-2015. Code licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). Documentation licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
 
 
