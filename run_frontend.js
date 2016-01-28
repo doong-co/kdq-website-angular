@@ -1,6 +1,6 @@
 var static = require('node-static');
 
-var fileServer = new static.Server('frontend/dist', { cache: 7200 });
+var fileServer = new static.Server('frontend/dist', { cache: 7200, gzip: true });
 
 require('http').createServer(function (request, response) {
     request.addListener('end', function () {
