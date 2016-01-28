@@ -1,4 +1,5 @@
-# KodeQ.com
+## Introduction
+
 As Wordpress became too clunky and difficult to manage, 
 we decided to re-build our website from scratch and strip all the unnecessary overhead.
 
@@ -9,7 +10,7 @@ Note that as we're not handling heavy traffic or large amount of data, this is m
 how fast a website can load with more content and interaction. As of now we're not at the peak of the possible load speed, but we will continue to experiment and push it to the limits.
 
 
-Our next goals to enhance this website:
+Our next goals:
 
 - Change the HTML structure to better serve SEO purpose
 - Use tools like prerender.io to prerender the websites for crawlers
@@ -18,6 +19,8 @@ Our next goals to enhance this website:
 - Lazy load heavy components
 - Automated testing
 
+## License
+Copyright by KodeQ ©2010-2015. Code licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0). Documentation licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
 
 
 
