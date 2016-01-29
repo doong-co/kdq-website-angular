@@ -9,9 +9,9 @@
         .state('about_us', {
           url: '/about-us',
           templateUrl: 'scripts/about_us/about_us.html',
-          // nav: {
-          //   title: 'About us'
-          // }
+          nav: {
+            title: 'About us'
+          }
         });
     });
 
