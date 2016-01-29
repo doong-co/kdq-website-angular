@@ -244,3 +244,108 @@ kdq-layout
       border-right: none
       border-top: none
 
+.kdq-wrap-time-line
+  max-width: 1110px
+  margin: 0 auto
+.kdq-time-line
+  height: 100%
+  overflow: hidden
+  &::before, &::after
+    content: ''
+    position: fixed
+    width: 1110px
+    left: 50%
+    right: auto
+    -webkit-transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
+    -ms-transform: translateX(-50%)
+    -o-transform: translateX(-50%)
+    transform: translateX(-50%)
+    height: 50%
+    z-index: -1
+  &::before
+    top: 0
+    background-color: #759C9A
+    -webkit-transition: all 0.8s
+    -moz-transition: all 0.8s
+    transition: all 0.8s
+  &::after
+    top: 50%
+    background-color: #121212
+
+.cd-container
+  margin: 0 auto
+  padding: 0
+  &::after
+    content: ''
+    display: table
+    clear: both
+
+// Our service
+.cd-service
+  position: relative
+  z-index: 2
+  min-height: 50px
+  margin-left: 56px
+  background-color: #fff
+  padding: 0 1em 4em
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 56px
+    right: 100%
+    z-index: 2
+  &::before
+    top: 0
+    height: 50px
+    background-repeat: no-repeat
+  &::after
+    top: 50px
+    bottom: 0
+    background-image: url("/images/cd-pattern-small.svg")
+    background-repeat: repeat-y
+  &.cd-service-divider
+    &::after
+      top: 0
+    &:last-child
+      display: none
+  &.cd-service-1::before
+    background-image: url("/images/cd-icon-1-small.svg")
+  &.cd-service-2::before
+    background-image: url("/images/cd-icon-2-small.svg")
+  &.cd-service-3::before
+    background-image: url("/images/cd-icon-3-small.svg")
+  &.cd-service-4::before
+    background-image: url("/images/cd-icon-4-small.svg")
+  h2
+    text-transform: uppercase
+
++media-breakpoint-up(md)
+  .cd-service
+    min-height: 525px
+    margin-left: 420px
+    padding: 6em 2em
+    &::before, &::after
+      width: 420px
+    &::before
+      height: 325px
+    &::after
+      top: 325px
+      background-image: url("/images/cd-pattern-large.svg")
+    &.cd-service-divider
+      &:first-child
+        min-height: 50px
+        padding: 0
+      &:last-child
+        min-height: 50px
+        padding: 0
+        display: block
+    &.cd-service-1::before
+      background-image: url("/images/cd-icon-1-large.svg")
+    &.cd-service-2::before
+      background-image: url("/images/cd-icon-2-large.svg")
+    &.cd-service-3::before
+      background-image: url("/images/cd-icon-3-large.svg")
+    &.cd-service-4::before
+      background-image: url("/images/cd-icon-4-large.svg")
+
