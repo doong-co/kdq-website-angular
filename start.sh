@@ -6,4 +6,4 @@ npm install
 
 pm2 stop all
 
-pm2 start run_frontend.js
+pm2 start server_prod.js

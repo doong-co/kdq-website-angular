@@ -11,12 +11,12 @@ module.exports = function(grunt) {
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
-
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
+    express: 'grunt-express-server'
   });
 
   var cdnService = {
@@ -128,7 +128,23 @@ module.exports = function(grunt) {
         ]
       }
     },
-
+    express: {
+      options: {
+        background: false
+      },
+      dev: {
+        options: {
+          background: true,
+          script: '../server_dev.js'
+        }
+      },
+      prod: {
+        options: {
+          script: '../server_prod.js',
+          node_env: 'production'
+        }
+      }
+    },
     // The actual grunt server settings
     connect: {
       options: {
@@ -140,7 +156,7 @@ module.exports = function(grunt) {
       livereload: {
         options: {
           open: true,
-          middleware: function(connect) {
+          middleware: function(connect, options, middlewares) {
             return [
               connect.static('.tmp'),
               connect().use(
@@ -588,7 +604,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function(target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'express:prod']);
     }
 
     grunt.task.run([
@@ -596,7 +612,8 @@ module.exports = function(grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
-      'connect:livereload',
+      // 'connect:livereload',
+      'express:dev',
       'watch'
     ]);
   });

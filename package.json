@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kodeq-dev/kdq-website-angular#readme",
   "dependencies": {
     "compression": "^1.6.1",
+    "connect-livereload": "^0.5.4",
     "express": "^4.13.4"
   }
 }
