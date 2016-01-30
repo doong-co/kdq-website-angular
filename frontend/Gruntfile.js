@@ -481,6 +481,7 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,png,txt}',
             '*.html',
+            'service-worker-registration.js',
             'images/{,*/}*.{webp}',
             'fonts/{,*/}*.*'
           ]
@@ -538,7 +539,47 @@ module.exports = function(grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    swPrecache: {
+      dev: {
+        handleFetch: true,
+        rootDir: '<%= yeoman.dist %>'
+      }
     }
+
+  });
+
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+  function writeServiceWorkerFile(rootDir, handleFetch, callback) {
+    var config = {
+      cacheId: appConfig.appName,
+      handleFetch: handleFetch,
+      logger: grunt.log.writeln,
+      staticFileGlobs: [
+        rootDir + '/fonts/**.*',
+        rootDir + '/styles/**.css',
+        rootDir + '/images/**.*',
+        rootDir + '/scripts/**.js',
+      ],
+      stripPrefix: rootDir + '/'
+    };
+
+    swPrecache.write(path.join(rootDir, 'service-worker.js'), config, callback);
+  }
+
+  grunt.registerMultiTask('swPrecache', function() {
+    var done = this.async();
+    var rootDir = this.data.rootDir;
+    var handleFetch = this.data.handleFetch;
+
+    writeServiceWorkerFile(rootDir, handleFetch, function(error) {
+      if (error) {
+        grunt.fail.warn(error);
+      }
+      done();
+    });
   });
 
 
@@ -587,7 +628,7 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'manifest'
+    'swPrecache'
   ]);
 
   grunt.registerTask('default', [
