@@ -322,6 +322,10 @@ module.exports = function(grunt) {
     // Renames files for browser caching purposes
     filerev: {
       dist: {
+        options: {
+          algorithm: 'sha512',
+          length: 10
+        },
         src: [
           '<%= yeoman.dist %>/scripts/**/*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
@@ -506,7 +510,6 @@ module.exports = function(grunt) {
           basePath: '<%= yeoman.dist %>',
           network: ['*'],
           preferOnline: true,
-          exclude: ['index.html'],
           headcomment: ' <%= yeoman.appName %>',
           verbose: false,
           timestamp: true,
@@ -561,7 +564,7 @@ module.exports = function(grunt) {
         rootDir + '/fonts/**.*',
         rootDir + '/styles/**.css',
         rootDir + '/images/**.*',
-        rootDir + '/scripts/**.js',
+        rootDir + '/scripts/**.js'
       ],
       stripPrefix: rootDir + '/'
     };
@@ -628,7 +631,8 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'swPrecache'
+    'manifest'
+    // 'swPrecache'
   ]);
 
   grunt.registerTask('default', [
