@@ -14,7 +14,4 @@ angular
     'kdq.home',
     'kdq.our_services',
     'kdq.about_us',
-  ])
-  .config(function($locationProvider) {
-    $locationProvider.html5Mode(true);
-  });
+  ]);

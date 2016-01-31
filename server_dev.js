@@ -5,7 +5,7 @@ var livereload = require('connect-livereload');
 var app = express();
 
 var oneDay = 86400000;
-var PORT = 9000;
+var PORT = 3000;
 
 app.use(compression());
 app.use(livereload());

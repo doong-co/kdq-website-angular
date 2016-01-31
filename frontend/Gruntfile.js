@@ -525,7 +525,7 @@ module.exports = function(grunt) {
         options: {
           basePath: '<%= yeoman.dist %>',
           network: ['*'],
-          preferOnline: true,
+          preferOnline: false,
           headcomment: ' <%= yeoman.appName %>',
           verbose: false,
           timestamp: true,
@@ -565,12 +565,37 @@ module.exports = function(grunt) {
         handleFetch: true,
         rootDir: '<%= yeoman.dist %>'
       }
+    },
+
+    custom: {
+      useManifest: {
+        basePath: '<%= yeoman.dist %>',
+        src: 'index.html',
+        manifest: 'kdq.appcache'
+      }
     }
 
   });
 
+  grunt.registerMultiTask('custom', 'Custom task', function() {
+    if (this.target === 'useManifest') {
+      var fs = require('fs');
+      var pathFileHtml = this.data.basePath + '/' + this.data.src;
+
+      var result = fs.readFileSync(pathFileHtml, 'utf8');
+      var found = result.match(/<html(.*?)>/);
+      var newValue = '<html' + found[1] + ' manifest="' + this.data.manifest + '">';
+      result = result.replace(/<html(.*?)>/g, newValue);
+
+      grunt.log.writeln('Replace ' + found[0] + ' to ' + newValue);
+
+      fs.writeFileSync(pathFileHtml, result, 'utf8');
+    }
+  });
+
   var path = require('path');
   var swPrecache = require('sw-precache');
+
   function writeServiceWorkerFile(rootDir, handleFetch, callback) {
     var config = {
       cacheId: appConfig.appName,
@@ -648,8 +673,8 @@ module.exports = function(grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'manifest'
-    // 'swPrecache'
+    'manifest',
+    'custom:useManifest'
   ]);
 
   grunt.registerTask('default', [
