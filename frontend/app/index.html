@@ -66,9 +66,13 @@
     </header>
     <section class="kdq-masthead wireframe-loading">
       <div class="container">
-        <h1>SOLID offshore front-end development</h1>
-        <h6>Our model heavily leverages long-term partnerships. You can count on us for on-time, on-budget delivery, and awesome products.</h6>
-        <a ui-sref="our_services" type="button" class="btn btn-white-outline btn-lg">Learn more</a>
+        <h1>{{title}}</h1>
+        {{#subTitle}}
+        <h6>{{subTitle}}</h6>
+        {{/subTitle}}
+        {{#canDisplayBtn}}
+          <a ui-sref="our_services" type="button" class="btn btn-white-outline btn-lg">Learn more</a>
+        {{/canDisplayBtn}}
       </div>
     </section>
   </kdq-layout>
