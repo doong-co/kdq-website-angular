@@ -10,7 +10,7 @@
           url: '/our-services',
           templateUrl: 'scripts/our_services/our_services.html',
           nav: {
-            title: 'Our services'
+            title: 'Our Services'
           }
         });
     });

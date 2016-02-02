@@ -10,7 +10,7 @@
           url: '/about-us',
           templateUrl: 'scripts/about_us/about_us.html',
           nav: {
-            title: 'About us'
+            title: 'About Us'
           }
         });
     });
