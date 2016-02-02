@@ -12,7 +12,7 @@
         styles: '=kdqStaticMap',
         markers: '=kdqStaticMapMarkers'
       },
-      template: '<a href="{{::mapUrl}}" target="_blank"><img alt="{{::address}}" ng-src="{{::staticUrl}}" height="100%" width="100%"></a>',
+      template: '<a href="{{::mapUrl}}" target="_blank"><img alt="{{::address}}" ng-src="{{::staticUrl}}" height="100%" width="100%"><address ng-bind=::address></address></a>',
       link: function($scope, $element, $attr) {
         var options = {
           size: [$element.width(), $element.height()],

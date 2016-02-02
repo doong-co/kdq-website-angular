@@ -21,6 +21,9 @@ html, body
   height: 100%
   font-weight: 300
 
+a,button
+  outline: none !important
+
 a,button,code,div,img,input,label,li,p,pre,select,span,svg,table,td,textarea,th,ul
   -webkit-border-radius: 0!important
   -moz-border-radius: 0!important
@@ -242,6 +245,11 @@ kdq-layout
   margin: -8rem -0.9375rem -2rem
   .map
     height: 460px
+    address
+      position: absolute
+      bottom: 1rem
+      padding: 0 1rem
+      color: rgba(0,0,0,.5)
   .map + .map
     border-top: 4px solid transparent
   +media-breakpoint-up(sm)
