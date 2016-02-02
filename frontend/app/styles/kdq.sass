@@ -22,6 +22,14 @@ html, body
   height: 100%
   font-weight: 300
 
+svg
+  path, line, polyline
+    stroke: #000
+    stroke-width: 2px
+
+  path
+    fill: transparent
+
 a,button
   outline: none !important
 
@@ -189,7 +197,10 @@ kdq-layout
     text-align: left
   .intro-img
     max-width: 20rem
+    margin-bottom: 3rem
     width: 100%
+  +media-breakpoint-up(sm)
+    margin-bottom: 0
 
 .kdq-business
   background-color: $bg-default
