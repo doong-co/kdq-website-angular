@@ -5,7 +5,7 @@ var consolidate = require('consolidate');
 
 var app = express();
 
-var oneDay = 86400000;
+var oneWeek = 86400000*7;
 var PORT = 3000;
 
 app.use(compression());
@@ -23,9 +23,9 @@ app.get('/', function(req, res, next) {
   });
 });
 
-app.use(express.static(__dirname + '/frontend', { maxAge: oneDay }));
-app.use(express.static(__dirname + '/frontend/app', { maxAge: oneDay }));
-app.use(express.static(__dirname + '/frontend/.tmp', { maxAge: oneDay }));
+app.use(express.static(__dirname + '/frontend', { maxAge: oneWeek }));
+app.use(express.static(__dirname + '/frontend/app', { maxAge: oneWeek }));
+app.use(express.static(__dirname + '/frontend/.tmp', { maxAge: oneWeek }));
 
 app.get('/our-services', function(req, res, next) {
   res.render('index', {
