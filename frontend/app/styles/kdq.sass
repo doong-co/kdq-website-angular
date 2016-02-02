@@ -21,6 +21,11 @@ html, body
   height: 100%
   font-weight: 300
 
+a,button,code,div,img,input,label,li,p,pre,select,span,svg,table,td,textarea,th,ul
+  -webkit-border-radius: 0!important
+  -moz-border-radius: 0!important
+  border-radius: 0!important
+
 kdq-layout
   height: 110%
   display: block
@@ -148,7 +153,14 @@ kdq-layout
     background-color: rgba(black, .2)
     box-shadow: 0 1px 1px rgba(black, .6)
     border: none
-    padding: 1.5rem
+    padding: 1.5rem 2rem
+    margin-top: 1rem
+    &.dark
+      background-color: rgba(black, .6)
+      margin-top: 0
+      padding-top: 2.5rem
+      padding-bottom: 2.5rem
+
   .container
     position: relative
 
@@ -187,7 +199,6 @@ kdq-layout
 .kdq-clients
   .client
     margin-bottom: 3rem
-    border-radius: 0.3rem
     text-align: center
     &:last-child
       margin-bottom: 0
@@ -223,7 +234,6 @@ kdq-layout
     background-color: #fff
     padding: 3rem 2rem
     border: 1px solid #ccc
-    border-radius: 0.3rem
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)
     position: relative
     z-index: 1
