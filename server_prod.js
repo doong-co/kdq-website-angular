@@ -1,13 +1,14 @@
 var express = require('express');
 var compression = require('compression');
 var consolidate = require('consolidate');
-
+var prerender = require('prerender-node');
 var app = express();
 
 var oneWeek = 86400000*7;
 var PORT = 9000;
 
 app.use(compression());
+app.use(prerender.set('prerenderToken', '1OBZPUzitdL2GaU1IiZZ'));
 
 app.set('view engine', 'html');
 app.set('views', __dirname + '/frontend/dist');

@@ -6,7 +6,7 @@ var consolidate = require('consolidate');
 var app = express();
 
 var oneWeek = 86400000*7;
-var PORT = 3000;
+var PORT = 4000;
 
 app.use(compression());
 app.use(livereload());
