@@ -13,5 +13,5 @@ angular
     'kdq.layout',
     'kdq.home',
     'kdq.our_services',
-    'kdq.about_us',
+    'kdq.about_us'
   ]);

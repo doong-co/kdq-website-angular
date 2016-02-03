@@ -385,6 +385,11 @@ module.exports = function(grunt) {
           js: [
             [/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']
           ]
+        },
+        blockReplacements: {
+          js: function (block) {
+            return '<script defer src="' + block.dest + '"><\/script>';
+          }
         }
       }
     },
@@ -502,6 +507,7 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'sitemap.xml',
+            'scripts/bootstrap.js',
             'service-worker-registration.js',
             'images/{,*/}*.{webp}',
             'fonts/{,*/}*.*'
