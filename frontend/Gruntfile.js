@@ -144,6 +144,56 @@ module.exports = function(grunt) {
         }
       }
     },
+    // The actual grunt server settings
+    connect: {
+      options: {
+        port: 9000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: 'localhost',
+        livereload: 35729
+      },
+      livereload: {
+        options: {
+          open: true,
+          middleware: function(connect, options, middlewares) {
+            return [
+              connect.static('.tmp'),
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect().use(
+                '/app/styles',
+                connect.static('./app/styles')
+              ),
+              connect.static(appConfig.app)
+            ];
+          }
+        }
+      },
+      test: {
+        options: {
+          port: 9001,
+          middleware: function(connect) {
+            return [
+              connect.static('.tmp'),
+              connect.static('test'),
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect.static(appConfig.app)
+            ];
+          }
+        }
+      },
+      dist: {
+        options: {
+          open: true,
+          base: '<%= yeoman.dist %>'
+        }
+      }
+    },
 
     // Make sure there are no obvious mistakes
     jshint: {
@@ -617,6 +667,7 @@ module.exports = function(grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
+      // 'connect:livereload',
       'express:dev',
       'watch'
     ]);
