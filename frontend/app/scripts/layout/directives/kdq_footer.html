@@ -1,25 +1,56 @@
-<footer class="kdq-footer" ng-if="!layout.hideFooter">
+<div class="kdq-footer" ng-if="!layout.hideFooter">
   <canvas kdq-trianglify color="GnBu" class="bg-overlay"></canvas>
   <div class="bg-particles"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 m-b-1 footer-nav">
-        <div class="m-b-1 clearfix">
-          <nav class="nav nav-inline pull-right">
-            <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
-          </nav>
-        </div>
-        <div class="clearfix">
-          <nav class="nav nav-inline pull-right">
-            <!-- <a class="nav-link" href="#" target="_blank"><i class="fa fa-facebook fa-lg"></i></a> -->
-            <a class="nav-link" href="https://twitter.com/kodeqteam" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-            <a class="nav-link" href="https://github.com/kodeq-dev" target="_blank"><i class="fa fa-github fa-lg"></i></a>
-          </nav>
-        </div>
-      </div>
-      <div class="col-md-5 footer-copyright">
-        <p>© 2016 KodeQ LLC</p>
+  <section class="kdq-section kdq-connect m-b-3 row">
+    <div class="container">
+      <h2 class="m-b-2">Do you want to get in touch?</h2>
+      <p class="m-b-4">We are always excited about new projects!</p>
+      <div class="connect-form">
+        <form ng-submit="submitConnect()">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <input type="text" name="fullname" class="form-control form-control-lg" ng-model="connect.fullname" placeholder="Full name">
+            </div>
+            <div class="form-group col-md-6">
+              <input type="email" name="email" class="form-control form-control-lg" ng-model="connect.email" placeholder="Email address">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea type="text" name="message" class="form-control form-control-lg" ng-model="connect.message" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary-outline btn-lg btn-block">Submit</button>
+        </form>
       </div>
     </div>
-  </div>
-</footer>
+    <section class="kdq-locations clearfix">
+      <div kdq-static-map address="3237 Telford Terrace SW, Atlanta, GA 30331, USA" lat="33.6651392" lng="-84.5173652" class="map">
+      </div>
+      <div kdq-static-map address="25 Nguyễn Hữu Thọ, Tân Hưng, Ho Chi Minh City, Ho Chi Minh, Vietnam" lat="10.7409917" lng="106.698449" class="map"></div>
+    </section>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 m-b-1 footer-nav">
+          <div class="m-b-1 clearfix">
+            <nav class="nav nav-inline pull-right">
+              <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+            </nav>
+          </div>
+          <div class="clearfix">
+            <nav class="nav nav-inline pull-right">
+              <a class="nav-link" href="https://www.facebook.com/kodeq.team" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+              <a class="nav-link" href="https://twitter.com/kodeqteam" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+              <a class="nav-link" href="https://www.linkedin.com/company/kodeq" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+              <a class="nav-link" href="https://github.com/kodeq-dev" target="_blank"><i class="fa fa-github fa-lg"></i></a>
+            </nav>
+          </div>
+        </div>
+        <div class="col-md-5 footer-copyright">
+          <p>© 2016 KodeQ LLC</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
