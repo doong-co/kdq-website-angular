@@ -14,10 +14,11 @@
   }
   
   // @ngInject
-  function kdqLayoutController($rootScope) {
+  function kdqLayoutController($rootScope, $anchorScroll) {
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
       $rootScope.layout = angular.copy(toState.layout) || {};
       $rootScope.layout.currentState = toState.name;
+      $anchorScroll();
     });
   }
 })();
