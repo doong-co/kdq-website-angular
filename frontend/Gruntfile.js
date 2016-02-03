@@ -282,7 +282,15 @@ module.exports = function(grunt) {
     wiredep: {
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath: /\.\.\//
+        ignorePath: /\.\.\//,
+        fileTypes: {
+          html: {
+            replace: {
+              js: '<script defer src="{{filePath}}"></script>'
+            }
+          }
+        }
+        
       },
       test: {
         devDependencies: true,
@@ -537,7 +545,13 @@ module.exports = function(grunt) {
           verbose: false,
           timestamp: true,
           hash: true,
-          cache: cdnUrls
+          cache: cdnUrls,
+          process: function(path) {
+            if(path.indexOf('fontawesome') > -1) {
+              return path + '?v=4.5.0';
+            }
+            return path;
+          }
         },
         src: ['**/**.*'],
         dest: '<%= yeoman.dist %>/<%= yeoman.appName %>.appcache'
