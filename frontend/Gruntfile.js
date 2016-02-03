@@ -46,7 +46,6 @@ module.exports = function(grunt) {
     },
   };
   var cdnUrls = [
-    '//fonts.googleapis.com/css?family=Roboto:400,100,300,300italic',
     '//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js',
     '//cdn.jsdelivr.net/lodash/4.0.1/lodash.min.js',
@@ -142,56 +141,6 @@ module.exports = function(grunt) {
         options: {
           script: '../server_prod.js',
           node_env: 'production'
-        }
-      }
-    },
-    // The actual grunt server settings
-    connect: {
-      options: {
-        port: 9000,
-        // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
-        livereload: 35729
-      },
-      livereload: {
-        options: {
-          open: true,
-          middleware: function(connect, options, middlewares) {
-            return [
-              connect.static('.tmp'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect().use(
-                '/app/styles',
-                connect.static('./app/styles')
-              ),
-              connect.static(appConfig.app)
-            ];
-          }
-        }
-      },
-      test: {
-        options: {
-          port: 9001,
-          middleware: function(connect) {
-            return [
-              connect.static('.tmp'),
-              connect.static('test'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect.static(appConfig.app)
-            ];
-          }
-        }
-      },
-      dist: {
-        options: {
-          open: true,
-          base: '<%= yeoman.dist %>'
         }
       }
     },
@@ -588,6 +537,16 @@ module.exports = function(grunt) {
       }
     },
 
+    inline: {
+      dist: {
+        options:{
+          cssmin: true
+        },
+        src: '<%= yeoman.dist %>/index.html',
+        dest: '<%= yeoman.dist %>/index.html'
+      }
+    },
+
     custom: {
       useManifest: {
         basePath: '<%= yeoman.dist %>',
@@ -658,7 +617,6 @@ module.exports = function(grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
-      // 'connect:livereload',
       'express:dev',
       'watch'
     ]);
@@ -692,6 +650,7 @@ module.exports = function(grunt) {
     'cssmin',
     'uglify',
     'filerev',
+    'inline',
     'usemin',
     'htmlmin',
     'manifest',

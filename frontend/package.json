@@ -21,6 +21,7 @@
     "grunt-express-server": "^0.5.1",
     "grunt-filerev": "^2.1.2",
     "grunt-google-cdn": "^0.4.3",
+    "grunt-inline": "^0.3.6",
     "grunt-jscs": "^1.8.0",
     "grunt-manifest": "^0.4.4",
     "grunt-newer": "^1.1.0",
