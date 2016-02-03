@@ -148,25 +148,36 @@ kdq-layout
   position: relative
   h2
     text-align: center
+  p
+    max-width: 960px
+    margin: 0 auto
   img
     margin: 0 auto
     display: block
   .row + .row
     margin-top: 1.5rem
   .card
-    background-color: rgba(black, .2)
-    box-shadow: 0 1px 1px rgba(black, .6)
     border: none
     padding: 1.5rem 2rem
     margin-top: 1rem
+    text-align: center
     &.dark
       background-color: rgba(black, .6)
       margin-top: 0
       padding-top: 2.5rem
       padding-bottom: 2.5rem
-
+    i
+      font-size: 7rem
+      margin-top: 2rem
+      margin-bottom: 2.5rem
   .container
     position: relative
+
+.kdq-services
+  background-color: #fff
+
+.kdq-progress
+  color: #fff
 
 .kdq-footer
   padding: 3rem .9375rem 2rem
@@ -199,10 +210,9 @@ kdq-layout
   background-color: $bg-default
   text-align: center
   color: #fff
-  i
-    font-size: 7rem
-    margin-top: 2rem
-    margin-bottom: 2.5rem
+  .card
+    background-color: rgba(black, .2)
+    box-shadow: 0 1px 1px rgba(black, .6)
 
 .kdq-clients
   .client
@@ -343,6 +353,8 @@ kdq-layout
     background-image: url("/images/cd-icon-3-small.svg")
   &.cd-service-4::before
     background-image: url("/images/cd-icon-4-small.svg")
+  &.cd-service-5::before
+    background-image: url("/images/cd-icon-5-small.svg")
   h2
     text-transform: uppercase
 
@@ -350,7 +362,7 @@ kdq-layout
   .cd-service
     min-height: 525px
     margin-left: 420px
-    padding: 6em 2em
+    padding: 2.5em 2em
     &::before, &::after
       width: 420px
     &::before
@@ -374,6 +386,8 @@ kdq-layout
       background-image: url("/images/cd-icon-3-large.svg")
     &.cd-service-4::before
       background-image: url("/images/cd-icon-4-large.svg")
+    &.cd-service-5::before
+      background-image: url("/images/cd-icon-5-large.svg")
 
 .kdq-404
   position: fixed
