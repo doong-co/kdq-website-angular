@@ -12,7 +12,7 @@
         styles: '=kdqStaticMap',
         markers: '=kdqStaticMapMarkers'
       },
-      template: '<a href="{{::mapUrl}}" target="_blank"><img alt="{{::address}}" ng-src="{{::staticUrl}}" height="100%" width="100%"><div class="address"><address><p class="country m-b-2" ng-bind="country"></p><p ng-bind=::address></p></address></div></a>',
+      template: '<a href="{{::mapUrl}}" target="_blank"><img alt="{{::address}}" ng-src="{{::staticUrl}}" height="100%" width="100%"><div class="address"><address><p class="city m-b-2" ng-bind="city"></p><p ng-bind=::address></p></address></div></a>',
       link: function($scope, $element, $attr) {
         var options = {
           size: [$element.width(), $element.height()],
@@ -29,7 +29,7 @@
         }
         var splitAddress = $attr.address.split(', ');
         $scope.address = $attr.address;
-        $scope.country = splitAddress[splitAddress.length - 1];
+        $scope.city = $attr.city;
         $scope.mapUrl = getMapUrl(options);
         $scope.staticUrl = getStaticMapURL(options);
       }
