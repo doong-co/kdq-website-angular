@@ -9,7 +9,7 @@
       </div>
       <div class="collapse navbar-toggleable-xs" id="main-navbar">
         <nav class="nav navbar-nav pull-sm-right">
-          <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
+          <a ng-repeat="nav in navs track by $index" class="nav-item nav-link" ng-class="{'active': layout.currentState == nav.stateName}" ui-sref="{{::nav.stateName}}" ng-bind="::nav.title"></a>
         </nav>
       </div>
     </div>

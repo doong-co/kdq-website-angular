@@ -602,7 +602,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           stylesheets: ['../.tmp/styles/kdq.css'],
-          ignore: [/\.collapsing/,/\.collapse/, /\.nav-link \+ \.nav-link/, /\.nav-white/, /\.map/]
+          ignore: [/\.collapsing/,/\.collapse/, /\.nav-link \+ \.nav-link/, /\.nav-white/, /\.map/, /\.navbar-nav \.nav-link\.active/]
         },
         files: {
           '.tmp/styles/kdq.css': [
