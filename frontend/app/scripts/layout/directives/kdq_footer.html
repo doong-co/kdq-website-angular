@@ -6,6 +6,9 @@
       <h2 class="m-b-2">Do you want to get in touch?</h2>
       <p class="m-b-4">We are always excited about new projects!</p>
       <div class="connect-form">
+        <div class="alert alert-success" role="alert" ng-if="submitConnectSuccessfull">
+          <strong>Thank you!</strong> We'll review your submission and back to you within 48 hours.
+        </div>
         <form ng-submit="submitConnect()">
           <div class="row">
             <div class="form-group col-md-6">
