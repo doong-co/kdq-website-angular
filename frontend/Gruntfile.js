@@ -524,6 +524,11 @@ module.exports = function(grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/styles',
+          dest: '<%= yeoman.dist %>/styles',
+          src: 'lato.css'
         }]
       },
       styles: {
@@ -594,6 +599,21 @@ module.exports = function(grunt) {
         },
         src: '<%= yeoman.dist %>/index.html',
         dest: '<%= yeoman.dist %>/index.html'
+      }
+    },
+
+    uncss: {
+      dist: {
+        options: {
+          stylesheets: ['../.tmp/styles/kdq.css'],
+          ignore: [/dropdown-menu/,/\.collapsing/,/\.collapse/, /.navbar-nav/, /.nav-white/, /.map/]
+        },
+        files: {
+          '.tmp/styles/kdq.css': [
+            '<%= yeoman.dist %>/index.html',
+            '<%= yeoman.app %>/scripts/**/*.html'
+            ]
+        }
       }
     },
 
@@ -698,10 +718,11 @@ module.exports = function(grunt) {
     'ngAnnotate',
     'copy:dist',
     'cdnify',
+    'inline',
+    'uncss',
     'cssmin',
     'uglify',
     'filerev',
-    'inline',
     'usemin',
     'htmlmin',
     'manifest',
