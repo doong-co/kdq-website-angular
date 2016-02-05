@@ -18,6 +18,7 @@
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
       $rootScope.layout = angular.copy(toState.layout) || {};
       $rootScope.layout.currentState = toState.name;
+      $('#main-navbar').collapse('hide');
       $anchorScroll();
     });
   }
