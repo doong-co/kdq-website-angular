@@ -26,14 +26,13 @@ app.use(express.static(__dirname + '/frontend/dist', { maxAge: oneWeek }));
 
 app.get('/our-services', function(req, res, next) {
   res.render('index', {
-    title: "Services",
-    subTitle: "We have our developers working and communicating directly with our clients’ engineering team. We use Agile processes and professional tools such as Jira and Slack to keep track of development progress and better collaborate with our clients."
+    title: "Our Services"
   });
 });
 
 app.get('/about-us', function(req, res, next) {
   res.render('index', {
-    title: "About us"
+    title: "About Us"
   });
 });
 
