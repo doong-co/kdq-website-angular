@@ -15,7 +15,7 @@
               <input type="text" name="fullname" class="form-control form-control-lg" ng-model="connect.fullname" placeholder="Full name" required ng-class="{'form-control-success': messageForm.fullname.$touched && !messageForm.fullname.$error.required, 'form-control-danger': messageForm.fullname.$touched && messageForm.fullname.$error.required}">
             </div>
             <div class="form-group col-md-6" ng-class="{'has-success': messageForm.email.$touched && !messageForm.email.$error.email, 'has-danger': messageForm.email.$touched && messageForm.email.$error.email}">
-              <input type="email" name="email" class="form-control form-control-lg" ng-model="connect.email" placeholder="Email address" required ng-class="{'form-control-success': messageForm.email.$touched && !messageForm.email.$error.email, 'form-control-danger': messageForm.email.$touched && messageForm.email.$error.email}">
+              <input type="email" name="email" class="form-control form-control-lg" ng-model="connect.email" placeholder="Email address" required ng-class="{'form-control-success': messageForm.email.$touched && !messageForm.email.$error.email && !messageForm.email.$error.required, 'form-control-danger': messageForm.email.$touched && messageForm.email.$error.email && messageForm.email.$error.required}">
             </div>
           </div>
           <div class="form-group">
