@@ -16,19 +16,19 @@ app.engine('html', consolidate.mustache);
 
 app.get('/', function(req, res, next) {
   res.render('index', {
-    title: "SOLID offshore front-end development",
-    subTitle: "Our model heavily leverages long-term partnerships. You can count on us for on-time, on-budget delivery, and awesome products.",
+    title: "Hire Elite Fulltime Developers Overseas",
+    subTitle: "Let us know your requirement, we will find the right developers for you from our fully-vetted network in South East Asia. Hands-off, we'll run their payroll and manage the local office. They focus on delivery. You focus on management.",
     canDisplayBtn: true
   });
 });
 
 app.use(express.static(__dirname + '/frontend/dist', { maxAge: oneWeek }));
 
-app.get('/our-services', function(req, res, next) {
-  res.render('index', {
-    title: "Our Services"
-  });
-});
+// app.get('/our-services', function(req, res, next) {
+//   res.render('index', {
+//     title: "Our Services"
+//   });
+// });
 
 app.get('/about-us', function(req, res, next) {
   res.render('index', {

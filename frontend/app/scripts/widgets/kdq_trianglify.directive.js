@@ -12,7 +12,7 @@
         if (!_.isFunction($window.Trianglify)) {
           return $log.error('Trianglify is not function');
         }
-        // var colors = ['Greys', 'Blues', 'RdYlBu', 'PuOr', 'YlOrRd', 'PuBu', 'Purples'];
+        // var colors = ['RdYlBu', 'PuOr', 'YlOrRd', 'PuBu', 'Purples'];
         var pattern = Trianglify({
           width: $element.width(),
           height: $element.height(),

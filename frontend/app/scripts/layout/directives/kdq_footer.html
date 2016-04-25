@@ -3,11 +3,11 @@
   <div class="bg-particles"></div>
   <section class="kdq-section kdq-connect m-b-3 row">
     <div class="container">
-      <h2 class="m-b-2">Do you want to get in touch?</h2>
-      <p class="m-b-4">We are always excited about new projects!</p>
+      <h2 class="m-b-2">Drop Us Your Job Posting</h2>
+      <!-- <p class="m-b-4">We are always excited about new projects!</p> -->
       <div class="connect-form">
         <div class="alert alert-success" role="alert" ng-if="submitConnectSuccessfull">
-          <strong>Thank you!</strong> We'll review your submission and back to you within 48 hours.
+          <strong>Thank you!</strong> We'll review your submission and get back to you within 48 hours.
         </div>
         <form name="messageForm" novalidate ng-submit="submitConnect(); messageForm.$setUntouched(false);">
           <div class="row">
@@ -19,14 +19,14 @@
             </div>
           </div>
           <div class="form-group">
-            <textarea type="text" name="message" class="form-control form-control-lg" ng-model="connect.message" placeholder="Message"></textarea>
+            <textarea type="text" name="message" class="form-control form-control-lg" ng-model="connect.message" placeholder="Your Job Posting"></textarea>
           </div>
           <button type="submit" class="btn btn-primary-outline btn-lg btn-block" ng-disabled="!messageForm.$valid">Send</button>
         </form>
       </div>
     </div>
     <section class="kdq-locations clearfix">
-      <div kdq-static-map city="Atlanta" address="3237 Telford Terrace SW, Atlanta, GA 30331, USA" lat="33.6651392" lng="-84.5173652" class="map">
+      <div kdq-static-map city="Atlanta" address="1100 Peachtree Street NE, Suite 200, Atlanta, GA 30309, USA" lat="33.6651392" lng="-84.5173652" class="map">
       </div>
       <div kdq-static-map city="Ho Chi Minh" address="0905 W1, 25 Nguyen Huu Tho, Tan Hung, Dist. 7, Ho Chi Minh City, Vietnam" lat="10.7409917" lng="106.698449" class="map"></div>
     </section>
